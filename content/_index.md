@@ -1,127 +1,88 @@
 ---
-# Leave the homepage title empty to use the site title
-title: ''
-summary: ''
-date: 2022-10-24
+title: Elias Manos — Academic Portfolio
+summary: "Welcome to the academic portfolio of Elias Manos, showcasing biography, publications, employment timeline, education, and CV."
+date: 2026-06-30
 type: landing
-
+design:
+  spacing: 6rem
 sections:
-  - block: resume-biography-3
+  - block: hero
     content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
-      username: me
-      text: ''
-      # Show a call-to-action button under your biography? (optional)
-      button:
-        text: Download CV
-        url: uploads/resume.pdf
-      headings:
-        about: ''
-        education: ''
-        interests: ''
+        eyebrow: Academic Researcher
+        title: Elias Manos
+        text: "Graduate student at the University of Connecticut in Natural Resources & the Environment. Focused on Arctic permafrost and remote sensing applications."
+        primary_action:
+          url: /publications/
+          text: View Publications
+          icon: academicons/orcid
+          style: gradient
+        secondary_action:
+          url: /cv/
+          text: View CV
+          icon: hero/document-text
+          style: ghost
     design:
-      # Use the new Gradient Mesh which automatically adapts to the selected theme colors
-      background:
+        background:
+          color:
+            light: "#ffffff"
+            dark: "#0b1021"
+          gradient:
+            type: radial
+            start: primary-500
+            end: transparent
+            position: "50% -10%"
+            shape: ellipse
+            size: "80% 80%"
+        text_color_light: true
         gradient_mesh:
           enable: true
-
-      # Name heading sizing to accommodate long or short names
-      name:
-        size: md # Options: xs, sm, md, lg (default), xl
-
-      # Avatar customization
-      avatar:
-        size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
-        shape: circle # Options: circle (default), square, rounded
+          style: orbs
+          colors:
+            - primary-500/20
+            - secondary-500/20
+          orb_count: 2
+          positions:
+            - top-0 left-1/4
+            - bottom-0 right-1/4
+          sizes:
+            - w-96 h-96
+            - w-80 h-80
+          animation: pulse
+          intensity: medium
+  - block: resume-biography
+    content:
+        username: me
+        text: "Graduate student at the University of Connecticut. Research focuses on Arctic permafrost processes, remote sensing, and AI applications to environmental science."
+        button:
+          url: /cv/
+          text: Download CV
+    design:
+        avatar:
+          size: xl
+          shape: circle
   - block: markdown
     content:
-      title: '📚 My Research'
-      subtitle: ''
-      text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
-
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-
-        Please reach out to collaborate 😃
-    design:
-      columns: '1'
-  - block: collection
-    id: papers
-    content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publications
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 2
+        text:
+          |
+            ## Employment
+            
+            - Graduate student, Natural Resources & the Environment, University of Connecticut, Storrs, US
+            
+            ## Education
+            
+            - Doctor of Philosophy, Natural Resources & the Environment, University of Connecticut, Storrs, US (2024–present)
+            - Master of Science, Natural Resources & the Environment, University of Connecticut, Storrs, US (2022–2024)
+            - Bachelor of Arts, Geography, University of Connecticut, Storrs, US (2018–2022)
   - block: collection
     content:
-      title: Recent Publications
-      text: ''
-      filters:
-        folders:
-          - publications
-        exclude_featured: false
-    design:
-      view: citation
-  - block: collection
-    id: talks
+        title: Publications
+        collection: publication
+        limit: 10
+  - block: markdown
     content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - events
-    design:
-      view: card
-  - block: collection
-    id: news
-    content:
-      title: Recent News
-      subtitle: ''
-      text: ''
-      # Page type to display. E.g. post, talk, publication...
-      page_type: blog
-      # Choose how many pages you would like to display (0 = all pages)
-      count: 10
-      # Filter on criteria
-      filters:
-        author: ''
-        category: ''
-        tag: ''
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-        publication_type: ''
-      # Choose how many pages you would like to offset by
-      offset: 0
-      # Page order: descending (desc) or ascending (asc) date.
-      order: desc
-    design:
-      # Choose a layout view
-      view: card
-      # Reduce spacing
-      spacing:
-        padding: [0, 0, 0, 0]
-  - block: cta-card
-    demo: true # Only display this section in the HugoBlox Kit demo site
-    content:
-      title: 👉 Build your own academic website like this
-      text: |-
-        This site is generated by HugoBlox Kit - the FREE, Hugo-based open source website builder trusted by 250,000+ academics like you.
-
-        <a class="github-button" href="https://github.com/HugoBlox/kit" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star HugoBlox/kit on GitHub">Star</a>
-
-        Easily build anything with blocks - no-code required!
-
-        From landing pages, second brains, and courses to academic resumés, conferences, and tech blogs.
-      button:
-        text: Get Started
-        url: https://hugoblox.com/templates/
-    design:
-      card:
-        # Card background color (CSS class)
-        css_class: 'bg-gradient-to-br from-primary-500 via-primary-600 to-secondary-600 text-white shadow-2xl'
-        css_style: ''
+        text:
+          |
+            ## Curriculum Vitae
+            
+            Download my CV [here](/cv.pdf).
 ---
